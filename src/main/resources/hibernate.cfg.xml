@@ -1,0 +1,23 @@
+<hibernate-configuration>
+    <session-factory>
+        <property name="show_sql">false</property>
+        <property name="format_sql">false</property>
+        <property name="dialect">org.sqlite.hibernate.dialect.SQLiteDialect</property>
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="connection.url">jdbc:sqlite:Reviews.sqlite3</property>
+        <property name="connection.name"></property>
+        <property name="connection.password"></property>
+
+        <property name="hibernate.hbm2ddl.auto" >update</property>
+
+        <mapping class="org.example.Students" />
+        <mapping class="org.example.Reviews" />
+        <mapping class="org.example.Courses" />
+<!--        <mapping class="edu.virginia.cs.Transaction" />-->
+    </session-factory>
+</hibernate-configuration>
+
+<!--        - connection.url to point to your database or where you want your database written.
+You can leave this alone, but pointing it to a database in the resources folder is recommended.-->
+<!--        - mappings - all classes that are Entities (things that can be saved in a database)
+ need to be included here.-->
